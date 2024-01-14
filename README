@@ -1,14 +1,12 @@
-<H1>Simple to_do_list web Application</H1>
+Simple to_do_list web Application
 
-<h6>Technology : <span>front-end devlopment, Back-end devlopment</span></h6>
+Technology : front-end devlopment, Back-end devlopment
 
-<h6>Language : <span>Node js , MongoDB ,HTML , CSS , Javascript</span></h6>
+Language : Node js , MongoDB ,HTML , CSS , Javascript
 
-<p>Libraries : 
-<ol>
-    <li>express</li>
-    <li>ejs</li>
-    <li>mongoose</li>
-    <li>body-parser</li>
-</ol>
-</p>
+Libraries : 
+    express
+    ejs
+    mongoose
+    body-parser
+
