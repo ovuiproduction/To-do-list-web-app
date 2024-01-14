@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/630e6cad6a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <title>TO_DO</title>
+</head>
+<body>
+    <div class="root">  
+        <div class="inputBlock">
+            <div class="inputTask">
+                <form action="/add" method="post">
+                      <div class="mb-5">
+                        <label for="task" class="form-label">Task</label>
+                        <textarea name="task" class="form-control" id="task" rows="2"></textarea>
+                      </div>
+                      <button type="submit" class="btn btn-success">Add</button>
+                </form>
+            </div>
+        </div>
+        <div class="listBlock">
+            <h1>To DO List</h1>
+            <div class="tasks">
+                <ol id="tasklist">
+                    <% taskList.forEach((task) =>{ %>
+                        <li class="list-item">
+                            <form class="deleteform" action="/delete/<%= task._id %>" method="post">
+                                <h5><%= task.task %></h5>
+                                <button type="submit"><i class="fa-solid fa-trash deleteIcon"></i></button>
+                            </form>
+                        </li>
+                   <% }) %>
+                </ol>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const listItems = document.querySelectorAll('.list-item');
+    listItems.forEach((item)=>{
+        item.addEventListener("mouseover",()=>{
+            item.querySelector('.deleteIcon').style.display = 'block';
+        });
+        item.addEventListener("mouseout",()=>{
+            item.querySelector('.deleteIcon').style.display = 'none';
+        });
+    })
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</html>
