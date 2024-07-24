@@ -1,12 +1,26 @@
-Simple to_do_list web Application
+# To Do List Web Application
 
-Technology : front-end devlopment, Back-end devlopment
+## Technology
 
-Language : Node js , MongoDB ,HTML , CSS , Javascript
+### Frontend Stack
+1. EJS
+2. Html5
+3. css
+4. JavaScript
 
-Libraries : 
-    express
-    ejs
-    mongoose
-    body-parser
+### Backend Stack
+1. NodeJs
+2. MongoDB
+3. Express
 
+### Setup 
+
+```bash
+npm init
+```
+```bash
+npm install mongoose
+```
+```bash
+npm install express, ejs, body-parser
+```
